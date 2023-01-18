@@ -11,29 +11,67 @@ html {
 body {
 	text-align: center;
 	font-family: Calibri, serif;
-	background: lightblue;
+	background: #ffffff;
 }
 header, footer {
 	margin: 0;
 	padding: 0;
-	background: cyan;
+	background: #2f2f2f;
+	box-shadow: 2px 2px 2px 1px white;
+}
+form{
+	display: flex;
+	background: #2f2f2f;
+	padding: 2rem;
+	flex-direction: column;
+	gap: 2rem;
+}
+input{
+	border-radius: 7px;
+	padding: 1rem;
+}
+section{
+	margin-top: 1rem;
 }
 footer {
 	position: absolute;
 	top: 750px;
 	width: 100%;
 }
+.container {
+	display: flex;
+	width: 80%;
+	height: 100vh;
+	margin-top: 8rem;
+	justify-content: center;
+}
+.top{
+	width: 50%;
+	height: 2rem;
+}
+.mid{
+	height: 1rem;
+	background: red;
+}
 ul {
 	display: flex;
 	list-style-type: none;
-	justify-content: space-around;
+	padding: 1rem;
+	justify-content: flex-start;
 	align-items: center;
+	gap: 3rem;
 }
 li {
 	margin-right: 18px;
+	padding: 1rem;
 }
 a {
 	text-decoration: none;
+	color: #ffffff;
+	transition: 0.2s;
+}
+a:hover{
+	opacity: 0.6;
 }
 section, form {
 	display: flex;
