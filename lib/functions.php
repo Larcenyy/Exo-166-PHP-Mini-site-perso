@@ -19,8 +19,14 @@ function getContent() {
     else if(isset($_GET['page']) && $_GET['page'] == "admin") {
         include dirname(__DIR__, 1).'../pages/admin_index.php';
     }
-    else if(isset($_GET['page']) && $_GET['page'] == "admin") {
-        include dirname(__DIR__, 1).'../pages/admin_index.php';
+    else if(isset($_GET['page']) && $_GET['page'] == "index_admin") {
+        include dirname(__DIR__, 1).'../pages/index_admin.php';
+    }
+    else if(isset($_GET['page']) && $_GET['page'] == "logout") {
+        include dirname(__DIR__, 1).'../pages/logout.php';
+    }
+    else if(isset($_GET['page']) && $_GET['page'] == "checkmail") {
+        include dirname(__DIR__, 1).'../pages/checkmail.php';
     }
 }
 

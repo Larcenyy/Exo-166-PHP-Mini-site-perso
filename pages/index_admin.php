@@ -1,29 +1,25 @@
 <?php
-session_start();
 
-if (isset($_GET['page']) && $_GET['page'] == "admin") {
-    echo "oui";
+$password = "test123";
+
+
+if (isset($_POST["password"]) && $_POST["password"] == $password) {
+    $_SESSION["authentified"] = true;
+    if (isset($_POST['username']) && $_POST['password']){
+        $sessionTime = 60 * 60 * 24;
+        $name = $_POST['username'];
+        $_SESSION["username"] = $_POST["username"];
+        echo "Bonjour, vous êtes connectée sous le nom :  $name";
+        if (isset($_POST['check'])){
+            session_set_cookie_params($sessionTime);
+        }
+    }
+
 }
 else{
-    echo "nn";
-}
-
-$password = "pass11"; // Définir votre mot de passe ici
-
-if (isset($_SESSION["authentified"]) && $_SESSION["authentified"] == true) {
-    // Afficher le contenu protégé
-    echo "Contenu protégé";
-} else {
-    // Afficher un message d'erreur
-    echo "Mot de passe incorrect";
-}
-
-if ($_GET["admin"] && intval($_GET['admin']) == 1) {
-    if (isset($_POST["password"]) && $_POST["password"] == $password) {
-        $_SESSION["authentified"] = true;
+    if(isset($_GET['page']) && $_GET['page'] == "index_admin"){
+        $_GET['page'] = "none";
+        echo "Erreur de connexion..";
     }
-} else {
-    echo "non";
+    $_SESSION["authentified"] = false;
 }
-
-
