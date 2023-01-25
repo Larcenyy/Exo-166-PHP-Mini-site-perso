@@ -26,9 +26,25 @@ form{
 	flex-direction: column;
 	gap: 2rem;
 }
+.admin{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.admin_index{
+	padding: 2rem;
+	margin-top: 5rem;
+	flex-direction: column;
+	display: flex;
+	gap: 1rem;
+}
+label{
+	color: white;
+}
 input{
 	border-radius: 7px;
-	padding: 1rem;
+	padding: 0.4rem;
+	border: none;
 }
 section{
 	margin-top: 1rem;
@@ -38,12 +54,14 @@ footer {
 	top: 750px;
 	width: 100%;
 }
+
 .container {
 	display: flex;
 	width: 80%;
 	height: 100vh;
 	margin-top: 8rem;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
 }
 .top{
 	width: 50%;
@@ -57,9 +75,17 @@ ul {
 	display: flex;
 	list-style-type: none;
 	padding: 1rem;
-	justify-content: flex-start;
 	align-items: center;
 	gap: 3rem;
+}
+ul li div{
+	display: flex;
+	justify-content: space-between;
+}
+h1{
+	background: #232222;
+	color: white;
+	padding: 0.4rem;
 }
 li {
 	margin-right: 18px;
@@ -73,12 +99,29 @@ a {
 a:hover{
 	opacity: 0.6;
 }
+section{
+	display: flex;
+	margin-top: 5rem;
+}
 section, form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
 section h1 {
 	margin: 8px;
+}
+.top{
+	background: #424242;
+	height: 60%;
+	padding: 2rem;
+}
+.top h3{
+	padding: 1rem;
+	color: white;
+	background: #232222;
+}
+.top p{
+	color: grey;
+	margin-top: 2rem;
 }

@@ -16,6 +16,12 @@ function getContent() {
 	else if(isset($_GET['page']) && $_GET['page'] == "contact") {
         include dirname(__DIR__, 1).'../pages/contact.php';
     }
+    else if(isset($_GET['page']) && $_GET['page'] == "admin") {
+        include dirname(__DIR__, 1).'../pages/admin_index.php';
+    }
+    else if(isset($_GET['page']) && $_GET['page'] == "admin") {
+        include dirname(__DIR__, 1).'../pages/admin_index.php';
+    }
 }
 
 function getPart($name) {
